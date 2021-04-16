@@ -1,15 +1,41 @@
-:root {
+:root,  #commonDialog {
   --tab-min-height: 28px !important;
+  
   --toolbarbutton-inner-padding: 6px !important;
   --toolbarbutton-outer-padding: 1px !important;
   --toolbar-start-end-padding: 1px !important;
+  
   --panel-font-size: 1em !important;
   --panel-separator-margin: 8px 0px !important;
   --panel-subview-body-padding: 8px 0px !important;
+  
   --arrowpanel-border-radius: 0px !important;
   --arrowpanel-menuitem-padding: 4px 16px !important;
   --arrowpanel-menuitem-margin: 0px !important;
   --arrowpanel-menuitem-border-radius: 0px !important;
+  
+  --subdialog-font-size: 1em !important;
+  
+  --in-content-button-vertical-padding: 0px !important;
+  --in-content-button-horizontal-padding: 8px !important;
+  --in-content-primary-button-text-color: rgb(255, 255, 255) !important;
+  --in-content-primary-button-background: var(--blue-60) !important;
+  --in-content-primary-button-background-hover: var(--blue-70) !important;
+  --in-content-primary-button-background-active: var(--blue-80) !important;
+  
+  --checkbox-checked-color: rgb(255, 255, 255) !important;
+  --checkbox-checked-bgcolor: var(--blue-60) !important;
+  --checkbox-checked-hover-bgcolor: var(--blue-70) !important;
+  --checkbox-checked-active-bgcolor var(--blue-80) !important;
+  
+  --focus-outline-color: var(--blue-60) !important;
+  
+  --blue-40: #45a1ff;
+  --blue-50: #0a84ff;
+  --blue-50-a30: rgba(10, 132, 255, 0.3);
+  --blue-60: #0060df;
+  --blue-70: #003eaa;
+  --blue-80: #002275;
 }
 
 /** Tab */
@@ -131,6 +157,11 @@
   display: block;
 }
 
+/** Nav bar */
+#nav-bar {
+  --toolbarbutton-icon-fill-attention: #45a1ff !important;
+}
+
 /** Mega bar, Search bar */
 #search-container, #urlbar-container {
   --urlbar-container-height: 32px !important;
@@ -162,6 +193,12 @@
 }
 :is(.chromeUI, .extensionPage, .notSecureText) :is(#identity-icon-box:active, #identity-icon-box[open]) {
   background-color: hsla(0, 0%, 70%, 0.3) !important;;
+}
+
+/** Bookmarks bar */
+#PersonalToolbar {
+  margin-inline: -2px !important;
+  padding-inline: var(--toolbar-start-end-padding) !important;
 }
 
 
@@ -407,6 +444,30 @@ notification-message:not([style*='margin']) {
   margin: auto 8px !important;
 }
 
+/** UI controls */
+panel {
+  --buttons-primary-button-color: rgb(255, 255, 255) !important;
+  --buttons-primary-button-bgcolor: var(--blue-60) !important;
+  --buttons-primary-button-hover-bgcolor: var(--blue-70) !important;
+  --buttons-primary-button-active-bgcolor: var(--blue-80) !important;
+}
+
+.panel-footer > button {
+  font-weight: normal !important;
+  min-width: 6.3em !important;
+  min-height: 32px;
+  padding: 0 8px !important;
+}
+
+.checkbox-check[checked] {
+  background-size: 14px !important;
+}
+
+menulist {
+  min-height: 32px !important;
+  padding: 0 8px !important;
+}
+
 /** Dialogs */
 @-moz-document url('chrome://global/content/commonDialog.xhtml'),
     url('chrome://mozapps/content/handling/permissionDialog.xhtml'),
@@ -421,10 +482,6 @@ notification-message:not([style*='margin']) {
     --in-content-primary-button-background: var(--blue-60) !important;
     --in-content-primary-button-background-hover: var(--blue-70) !important;
     --in-content-primary-button-background-active: var(--blue-80) !important;
-    --checkbox-checked-color: rgb(255, 255, 255) !important;
-    --checkbox-checked-bgcolor: var(--blue-60) !important;
-    --checkbox-checked-hover-bgcolor: var(--blue-70) !important;
-    --checkbox-checked-active-bgcolor var(--blue-80) !important;
   }
   
   dialog[subdialog] {
@@ -434,10 +491,5 @@ notification-message:not([style*='margin']) {
   button {
     font-weight: normal !important;
     min-width: 6.3em !important;
-  }
-
-  
-  .checkbox-check[checked] {
-    background-size: 14px !important;
   }
 }
