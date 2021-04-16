@@ -26,7 +26,7 @@
   --checkbox-checked-color: rgb(255, 255, 255) !important;
   --checkbox-checked-bgcolor: var(--blue-60) !important;
   --checkbox-checked-hover-bgcolor: var(--blue-70) !important;
-  --checkbox-checked-active-bgcolor var(--blue-80) !important;
+  --checkbox-checked-active-bgcolor: var(--blue-80) !important;
   
   --focus-outline-color: var(--blue-60) !important;
   
