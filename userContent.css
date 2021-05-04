@@ -28,6 +28,9 @@
     font-weight: normal !important;
     min-width: 6.3em !important;
   }
+  .button-add, .button-save, .button-edit, .button-toggle, .button-delete, .button-reset {
+    min-width: unset !important;
+  }
   .accessory-button {
     min-width: 150px !important;
   }
