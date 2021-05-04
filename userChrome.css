@@ -38,6 +38,11 @@
   --blue-80: #002275;
 }
 
+/** Titlebar */
+.titlebar-buttonbox {
+  margin-inline-end: -4px;
+}
+
 /** Tab */
 .tabbrowser-tab {
   --tab-line-color: #0A84FF;

@@ -39,6 +39,10 @@
     color: var(--in-content-accent-color) !important
   }
   
+  html|input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]), html|textarea {
+    padding: 6px !important;
+  }
+  
   .checkbox-check[checked] {
     background-size: 14px !important;
   }
