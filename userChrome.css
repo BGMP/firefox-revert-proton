@@ -171,6 +171,10 @@
   --toolbarbutton-icon-fill-attention: #45a1ff !important;
 }
 
+:where(#reload-button, #stop-button) > .toolbarbutton-icon, :where(#reload-button, #stop-button) > .toolbarbutton-animatable-box {
+  translate: 0px !important;
+}
+
 /** Mega bar, Search bar */
 #search-container, #urlbar-container {
   --urlbar-container-height: 32px !important;
@@ -355,7 +359,20 @@ toolbarseparator.proton-zap {
 #identity-popup-securityView #identity-popup-securityView-body {
   padding-block-start: 0px !important;
   padding-block-end: 8px !important;
-  margin-inline: calc(2em + 24px) 1em !important;
+  margin-block: 0px !important;
+  margin-inline-start: calc(2em + 16px) !important;
+  margin-inline-end: 0px !important;
+}
+
+.identity-popup-security-connection {
+  background-position-x: 18px !important;
+  padding-block: 0px !important;
+  padding-inline-start: calc(2em + 16px) !important;
+  padding-inline-end: 0px !important;
+}
+
+#identity-popup-security-button .identity-popup-security-connection {
+  padding-inline-start: 18px !important;
 }
 
 /** Tracking protection panel */
