@@ -378,18 +378,29 @@ toolbarseparator.proton-zap {
   padding-inline-start: 18px !important;
 }
 
+#identity-popup-security-button {
+  margin-block-end: 0px !important;
+}
+
+#identity-popup-clear-sitedata-footer,
+#identity-popup-more-info-footer {
+  margin-block-start: 8px !important;
+}
+
 /** Tracking protection panel */
 #protections-popup-mainView-panel-header-section + toolbarseparator {
   margin-block-start: 0px !important;
 }
 
 #protections-popup-content {
-  margin: 8px 0 !important;
+  margin: 0px !important;
 }
 
-.protections-popup-tp-switch-label-box {
-  height: unset !important;
+.protections-popup-tp-switch-label-box,
+.protections-popup-tp-switch-box {
+  min-height: unset !important;
 }
+
 
 #protections-popup-blocking-section-header,
 #protections-popup-not-blocking-section-header,
@@ -399,10 +410,6 @@ toolbarseparator.proton-zap {
   margin: 0px !important;
 }
 
-#protections-popup-not-blocking-section-header,
-#protections-popup-not-found-section-header {
-  margin-block-start: 8px !important;
-}
 
 #protections-popup-footer {
   padding: 0px !important;
