@@ -134,7 +134,8 @@
 
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
-  border-inline-start: 1px solid var(--toolbarbutton-active-background);
+  width: 1px;
+	background: linear-gradient(to bottom, transparent 10%, var(--toolbarbutton-active-background) 20%, var(--toolbarbutton-active-background) 80%, transparent 90%);
 }
 .tabbrowser-tab::before {
   margin-inline-start: -1px;
@@ -147,6 +148,7 @@
 #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[before-multiselected]::after {
   margin-block-start: var(--tabs-top-border-width);
   margin-block-end: 0;
+	background: transparent;
 }
 
 #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[beforeselected-visible]::after,
@@ -156,6 +158,7 @@
   border-color: var(--tabs-border-color);
   margin-block-start: 0;
   margin-block-end: var(--tabs-navbar-shadow-size);
+	background: var(--toolbarbutton-active-background);
 }
 
 .tabbrowser-tab::after,
