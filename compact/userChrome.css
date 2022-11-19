@@ -178,10 +178,6 @@
     margin-inline-start: -1px !important;
 }
 
-:is(:root[sizemode='normal'], :root[gtktiledwindow='true']) .tabbrowser-tab:first-of-type {
-    margin-inline-start: 1px !important;
-}
-
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
     border-inline-start: 1px solid var(--toolbarbutton-active-background);
