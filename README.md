@@ -1,1 +1,1 @@
-Reverts Firefox Proton to Photon compact
+Reverts Firefox Proton to Photon compact!
