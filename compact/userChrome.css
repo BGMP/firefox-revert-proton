@@ -36,27 +36,6 @@
     --blue-60: #0060df;
     --blue-70: #003eaa;
     --blue-80: #002275;
-
-    /* Photon Colours */
-    --lwt-accent-color: rgb(12, 12, 13) !important;
-    --lwt-text-color: rgba(249, 249, 250) !important;
-    --arrowpanel-background: rgb(74, 74, 79) !important;
-    --panel-disabled-color: rgba(249, 249, 250, 0.5) !important;
-    --panel-description-color: rgba(249, 249, 250, 0.65) !important;
-    --arrowpanel-color: rgba(249, 249, 250, 1) !important;
-    --lwt-toolbar-field-background-color: rgb(71, 71, 73) !important;
-    --lwt-toolbar-field-color: rgba(249, 249, 250, 1) !important;
-    --lwt-toolbar-field-border-color: rgba(249, 249, 250, 0.20000000298023224) !important;
-    --lwt-toolbar-field-focus: rgba(71, 71, 73, 1) !important;
-    --lwt-toolbar-field-focus-color: rgba(249, 249, 250, 1) !important;
-    --toolbar-bgcolor: rgb(50, 50, 52) !important;
-    --urlbar-separator-color: rgb(95, 102, 112) !important;
-    --lwt-toolbarbutton-icon-fill: rgba(249, 249, 250, 0.699999988079071) !important;
-    --autocomplete-popup-background: rgb(74, 74, 79) !important;
-    --autocomplete-popup-color: rgb(249, 249, 250) !important;
-    --avatar-image-url: url("https://firefoxusercontent.com/d15612e5af51b7cc6b83c6923c8ef17f") !important;
-    --arrowpanel-border-color: rgb(39, 39, 43) !important;
-    --chrome-content-separator-color: rgb(12, 12, 13) !important;
 }
 
 /** Title bar */
