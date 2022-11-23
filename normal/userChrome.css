@@ -126,6 +126,13 @@
     padding: 0 1px !important;
 }
 
+/* §NOTE: Some themes add a complete outline around tabs. This removes said outline, maintaining the accent on top of
+ the tab */
+#TabsToolbar #firefox-view-button[open]:not(:focus-visible) > .toolbarbutton-icon:-moz-lwtheme, .tab-background[selected]:not([multiselected="true"]):-moz-lwtheme {
+    outline: none !important;
+    outline-offset: 0 !important;
+}
+
 /** Tab icons **/
 .tab-icon-overlay[soundplaying]:not([crashed]), .tab-icon-overlay[muted]:not([crashed]), .tab-icon-overlay[activemedia-blocked]:not([crashed]) {
     margin-left: 19px !important;
