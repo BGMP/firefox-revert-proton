@@ -226,9 +226,13 @@
 
 /* TODO: figure out why the width calculation isn't working as intended. */
 /* §ANS: 'auto' seems to do the trick. Likely solved? - B */
+/* §ANS: 'auto' broke extension icons displayed in the search bar... reverted to 16px for normal - B */
 .urlbar-icon {
-    height: 100% !important;
-    width: auto !important;
+    width: 16px;
+    height: 16px;
+    -moz-context-properties: fill, fill-opacity;
+    fill: currentColor;
+    fill-opacity: var(--urlbar-icon-fill-opacity);
 }
 
 :is(.chromeUI, .extensionPage, .notSecureText) #identity-icon-box {
