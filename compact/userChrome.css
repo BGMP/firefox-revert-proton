@@ -170,10 +170,6 @@
     margin-inline-start: -1px !important;
 }
 
-.tabbrowser-tab::after,
-.tabbrowser-tab::before {
-    border-inline-start: 1px solid var(--toolbarbutton-active-background);
-}
 .tabbrowser-tab::before {
     margin-inline-start: -1px;
 }
