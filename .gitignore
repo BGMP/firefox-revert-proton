@@ -1,0 +1,9 @@
+# Mac OSX generated files
+.DS_Store
+
+# JetBrains
+.idea
+
+# Vim generated files
+*~
+*.swp
