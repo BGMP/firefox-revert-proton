@@ -14,6 +14,23 @@
     --arrowpanel-menuitem-margin: 0px !important;
     --arrowpanel-menuitem-border-radius: 0px !important;
 
+    /* Firefox 130+ moved tab shape/floating and popup rounding onto these
+       tokens. Zero them at the source so tabs stay square and popups keep
+       sharp corners, no matter which internal element consumes them. */
+    --tab-border-radius: 0px !important;
+    --tab-block-margin: 0px !important;
+    --tab-inline-margin: 0px !important;
+    --panel-border-radius: 0px !important;
+
+    /* Square the rest of the chrome. Firefox rounds most controls, address-bar
+       results and popups from these shared tokens. --border-radius-circle is left
+       alone so avatars and toggle switches stay round. */
+    --border-radius-small: 0px !important;
+    --border-radius-medium: 0px !important;
+    --border-radius-large: 0px !important;
+    --toolbarbutton-border-radius: 0px !important;
+    --urlbar-icon-border-radius: 0px !important;
+
     --subdialog-font-size: 1em !important;
 
     --in-content-button-vertical-padding: 0px !important;
@@ -62,6 +79,7 @@
 .tab-background {
     box-shadow: none !important;
     margin-block: 0 !important;
+    margin-inline: 0 !important;
     border-block-start: 2px solid transparent !important;
     border-radius: 0 !important;
 }
@@ -205,6 +223,43 @@
     --toolbarbutton-icon-fill-attention: #45a1ff !important;
 }
 
+/* Firefox 130+ paints a gradient across the top of the window (tabs + toolbar).
+   Photon had a flat toolbar colour, so drop the gradient image and keep the
+   solid --toolbar-bgcolor underneath. */
+#navigator-toolbox {
+    background-image: none !important;
+}
+
+/* The address bar now "breaks out" into a floating box that grows upward over the
+   tab strip when focused (the Megabar). Pin it back inside the toolbar so it no
+   longer overflows past the top of the window. */
+#urlbar[breakout][breakout-extend] {
+    top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+    inset-inline-start: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin-inline: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+/* Keep the results dropdown the same width as the address bar (no widening). */
+#urlbar[breakout][breakout-extend] > .urlbarView {
+    width: 100% !important;
+    margin-inline: 0 !important;
+}
+#urlbar[breakout][breakout-extend] > .urlbar-input-container {
+    height: var(--urlbar-height) !important;
+    padding-block: 0 !important;
+}
+
+/* Remove the focus glow/border entirely so the focused field looks flat. */
+#urlbar[focused] > .urlbar-background,
+#searchbar[focused] > .urlbar-background {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 0 !important;
+}
+
 :where(#reload-button, #stop-button) > .toolbarbutton-icon, :where(#reload-button, #stop-button) > .toolbarbutton-animatable-box {
     translate: 0px !important;
 }
@@ -255,6 +310,20 @@
     color: inherit;
 }
 
+/* Address bar, search bar and their suggestion dropdowns: keep square */
+#urlbar,
+#searchbar,
+#urlbar .urlbar-background,
+#searchbar .urlbar-background,
+.urlbarView,
+.urlbarView-row,
+.urlbarView-row-inner,
+#PopupSearchAutoComplete .autocomplete-richlistitem,
+#PopupAutoComplete .autocomplete-richlistitem {
+    border-radius: 0 !important;
+    position: relative !important;
+}
+
 /** Bookmarks bar */
 #PersonalToolbar {
     margin-inline: -2px !important;
@@ -271,6 +340,14 @@
 #permission-popup,
 #protections-popup {
     margin-block-start: -2px !important;
+}
+
+/* Firefox 130+: context menus and panels round via --panel-border-radius.
+   Keep them square to match Photon. */
+menupopup,
+panel,
+.menupopup-arrowscrollbox {
+    --panel-border-radius: 0px !important;
 }
 
 .panel-header {
